@@ -17,7 +17,7 @@
 
     #call-button {
       display: inline-block;
-      margin-top: 50px;
+      margin: 50px 0;
       padding: 10px;
       border: 1px solid #000;
       color: #c30;
@@ -28,6 +28,8 @@
 </head>
 <body>
   <div id='call-button'>点击唤起微信App个人页</div>
+
+  
 
   <script src='https://unpkg.com/callapp-lib@2.1.7/dist/index.umd.js'></script>
   <script>
@@ -74,5 +76,50 @@
     console.log(lib.generateUniversalLink({path: 'profile'}));
   </script>
 
+
+<div id='call-button'>点击唤起采源宝App个人页</div>
+<script>
+    const option = {
+      scheme: {
+        protocol: 'wireless1688',
+      },
+      outChain: {
+        protocol: 'wireless1688',
+        path: '',
+        key: '',
+      },
+      intent: {
+        package: 'com.alibaba.wireless',
+        scheme: 'wireless1688',
+      },
+      universal: {
+        host: 'flash-link.youku.com',
+        pathKey: 'action',
+      },
+      appstore: 'https://itunes.apple.com/cn/app/id1103629865',
+      yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.alibaba.wireless',
+      fallback: 'https://m.1688.com/d.html',
+      timeout: 2000,
+    };
+    const lib = new CallApp(option);
+    const callButton = document.querySelector('#call-button');
+
+    callButton.addEventListener('click', () => {
+      lib.open({
+        path: '',
+      });
+    });
+
+    // 因为业务需要，我们需要添加 outChain 属性
+    // 但是这样生成出来的 scheme 稍显复杂，所以下面的 log 其实是移除了 outChain 属性的
+    // outChain 很少有同学会使用到，所以更方便大家理解
+
+    // ykshortvideo://profile
+    console.log(lib.generateScheme({path: 'profile'})); 
+    // intent://profile#Intent;package=com.youku.shortvideo;scheme=ykshortvideo;S.browser_fallback_url=https%3A%2F%2Fdianliu.youku.com%2Fservice%2Fdownload;end;
+    console.log(lib.generateIntent({path: 'profile'})); 
+    // https://flash-link.youku.com?action=profile
+    console.log(lib.generateUniversalLink({path: 'profile'}));
+  </script>
 </body>
 </html>

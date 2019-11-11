@@ -27,30 +27,30 @@
   </style>
 </head>
 <body>
-  <div id='call-button'>点击唤起电流App个人页</div>
+  <div id='call-button'>点击唤起微信App个人页</div>
 
   <script src='https://unpkg.com/callapp-lib@2.1.7/dist/index.umd.js'></script>
   <script>
     const option = {
       scheme: {
-        protocol: 'ykshortvideo',
+        protocol: 'wireless1688',
       },
       outChain: {
-        protocol: 'ykshortvideo',
-        path: 'temporary',
-        key: 'url',
+        protocol: 'wireless1688',
+        path: '',
+        key: '',
       },
       intent: {
-        package: 'com.youku.shortvideo',
-        scheme: 'ykshortvideo',
+        package: 'com.alibaba.wireless',
+        scheme: 'wireless1688',
       },
       universal: {
         host: 'flash-link.youku.com',
         pathKey: 'action',
       },
-      appstore: 'https://itunes.apple.com/cn/app/id1383186862',
-      yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.youku.shortvideo',
-      fallback: 'https://dianliu.youku.com/service/download',
+      appstore: 'https://itunes.apple.com/cn/app/id507097717',
+      yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.alibaba.wireless',
+      fallback: 'https://m.1688.com/d.html',
       timeout: 2000,
     };
     const lib = new CallApp(option);
@@ -58,7 +58,7 @@
 
     callButton.addEventListener('click', () => {
       lib.open({
-        path: 'profile',
+        path: '',
       });
     });
 

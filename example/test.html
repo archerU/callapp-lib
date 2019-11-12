@@ -15,6 +15,12 @@
       text-align: center;
     }
 
+    a {
+      padding: 10px;
+      display:block;
+      margin: 10px;
+    }
+
     #call-button {
       display: inline-block;
       margin: 50px 0;
@@ -27,9 +33,11 @@
   </style>
 </head>
 <body>
-  <div id='call-button'>点击唤起微信App个人页</div>
+  <div id='call-button'>点击唤起测试 App个人页</div>
 
+  <a href="microsupply://wghome.m.1688.com/page/index.htm?tag_skip=tag_skip_home_recommend">URI Scheme方式 打开1688</a>
   
+  <a href="applinks://wg.1688.com/page/index.htm?tag_skip=tag_skip_home_recommend">appLink方式 打开1688</a>
 
   <script src='https://unpkg.com/callapp-lib@2.1.7/dist/index.umd.js'></script>
   <script>

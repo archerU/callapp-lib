@@ -28,7 +28,7 @@
 </head>
 <body>
   <div id='call-button'>信息展示</div>
-
+  <div id="userAgent">ua 信息</div>
   <script>
     /**
   * 获取 ios 大版本号
@@ -77,7 +77,7 @@
     };
   }
 
-  var list = document.querySelector("#call-button");
+  const list = document.querySelector("#call-button");
   list.innerHTML = '<div>'+
   '<p>'+'IOS 版本号：'+ getIOSVersion() +'</p>'+
     '<p>'+'微信版本号：'+ getWeChatVersion() +'</p>'+
@@ -91,6 +91,10 @@
    '<p>'+'isOriginalChrome：'+ getBrowser().isOriginalChrome +'</p>'+
    '<p>'+'isSafari：'+ getBrowser().isSafari +'</p>'+
   '</div>'
+
+
+  const userAgentHtml = document.querySelector("#userAgent");
+  userAgentHtml.innerHTML = '<div><p>'+ window.navigator.userAgent +'</p></div>';
   </script>
 
 

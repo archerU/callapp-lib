@@ -1,6 +1,6 @@
 {
   "name": "callapp-lib",
-  "version": "2.1.8",
+  "version": "0.0.1",
   "description": "call native webview from webpage",
   "main": "dist/index.umd.js",
   "scripts": {
@@ -28,15 +28,15 @@
     "h5"
   ],
   "author": {
-    "name": "suanmei",
-    "email": "code_lee@sina.com",
-    "url": "https://suanmei.github.com"
+    "name": "",
+    "email": "",
+    "url": ""
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/suanmei/callapp-lib/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/suanmei/callapp-lib#readme",
+  "homepage": "",
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",

@@ -35,13 +35,13 @@
 <body>
   <div id='call-button'>点击唤起测试 App个人页</div>
 
+  <div id="call-window">window.top.location.href</div>
+
   <h2>IOS</h2> 
 
   <h3>Universal Link （iOS9 & iOS9 以上版本）</h3>
 
   <a href="https://show.1688.com/unilink/common.html?go=https://m.1688.com/offer/603376384277.html">appLink方式 打开1688</a>
-
-  <a href="https://wg.1688.com">appLink方式 打开采源宝</a>
 
   <a href="https://wg.1688.com?go=https://m.1688.com/offer/603376384277.html">appLink方式 打开采源宝</a>
 
@@ -82,6 +82,12 @@
   <a href="https://zhihu.com">https 链接打开 知乎</a>
 
   <script src='https://unpkg.com/callapp-lib@2.1.7/dist/index.umd.js'></script>
+  <script>
+    const callWindow = document.querySelector('#call-window');
+    callWindow.addEventListener('click',() => {
+      window.top.location.href = 'https://show.1688.com/unilink/common.html?go=https://m.1688.com/offer/603376384277.html';
+    })
+  </script>
   <script>
     const option = {
       scheme: {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>goto app store示例</title>
+  <title>callapp-lib示例</title>
   <style>
     * {
       margin: 0;
@@ -15,9 +15,15 @@
       text-align: center;
     }
 
-    #call-button {
-      display: inline-block;
-      margin-top: 50px;
+    a {
+      padding: 10px;
+      display:block;
+      margin: 10px;
+    }
+
+    .button {
+      display: block;
+      margin: 50px 0;
       padding: 10px;
       border: 1px solid #000;
       color: #c30;
@@ -27,30 +33,25 @@
   </style>
 </head>
 <body>
-  <div id='call-button'>点击唤起电流App个人页</div>
+  <div class="button" id='call-button'>点击唤起测试 App个人页</div>
 
   <script src='https://unpkg.com/callapp-lib@2.1.7/dist/index.umd.js'></script>
   <script>
     const option = {
       scheme: {
-        protocol: 'ykshortvideo',
-      },
-      outChain: {
-        protocol: 'ykshortvideo',
-        path: 'temporary',
-        key: 'url',
+        protocol: 'wireless1688',
       },
       intent: {
-        package: 'com.youku.shortvideo',
-        scheme: 'ykshortvideo',
+        package: 'com.alibaba.wireless',
+        scheme: 'wireless1688',
       },
       universal: {
-        host: 'flash-link.youku.com',
-        pathKey: 'action',
+        host: 'show.1688.com/unilink/common.html',
+        pathKey: 'go',
       },
-      appstore: 'https://itunes.apple.com/cn/app/id1383186862',
-      yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.youku.shortvideo',
-      fallback: 'https://dianliu.youku.com/service/download',
+      appstore: 'https://itunes.apple.com/cn/app/id1103629865',
+      yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.alibaba.wireless',
+      fallback: 'https://m.1688.com/d.html',
       timeout: 2000,
     };
     const lib = new CallApp(option);
@@ -58,12 +59,10 @@
 
     callButton.addEventListener('click', () => {
       lib.open({
-        path: 'profile',
+        path: 'https://m.1688.com/offer/603376384277.html',
       });
     });
-
     callButton.click();
-
     // 因为业务需要，我们需要添加 outChain 属性
     // 但是这样生成出来的 scheme 稍显复杂，所以下面的 log 其实是移除了 outChain 属性的
     // outChain 很少有同学会使用到，所以更方便大家理解
@@ -75,6 +74,5 @@
     // https://flash-link.youku.com?action=profile
     console.log(lib.generateUniversalLink({path: 'profile'}));
   </script>
-
 </body>
 </html>

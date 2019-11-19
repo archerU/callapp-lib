@@ -37,6 +37,8 @@
 
   <div class="button" id="call-window">window.top.location.href</div>
 
+  <div class="button" id="call-cyb">采源宝 window.top.location.href</div>
+
   <h2>IOS</h2> 
 
   <h3>Universal Link （iOS9 & iOS9 以上版本）</h3>
@@ -88,6 +90,10 @@
     const callWindow = document.querySelector('#call-window');
     callWindow.addEventListener('click',() => {
       window.top.location.href = 'https://show.1688.com/unilink/common.html?go=https://m.1688.com/offer/603376384277.html';
+    })
+    const callCyb = document.querySelector('#call-cyb');
+    callCyb.addEventListener('click',() => {
+      window.top.location.href = 'https://wg.1688.com';
     })
   </script>
   <script>

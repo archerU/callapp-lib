@@ -243,3 +243,7 @@ url scheme 自定义拼接函数，内置的 buildScheme 函数是按照 uri 规
 ### generateUniversalLink
 
 生成 Universal Link，接收参数同 `generateScheme` 方法参数。
+
+## Q&A
+
+同域名下无法 拉起 app

@@ -97,8 +97,6 @@
 
   <a href="https://wg.1688.com/download/ah2aiux6.html">https 链接打开 采源宝市场</a>
 
-  
-
   <a href="https://taobao.com">https 链接打开 淘宝</a>
 
   <a href="https://h5.m.taobao.com">https 链接打开 手机淘宝</a>
@@ -132,7 +130,7 @@
       appstore: 'https://itunes.apple.com/cn/app/id1103629865',
       yingyongbao: '//a.app.qq.com/o/simple.jsp?pkgname=com.alibaba.wireless',
       fallback: 'https://m.1688.com/d.html',
-      timeout: 2000,
+      timeout: 1000,
     };
     const lib = new CallApp(option);
     const callButton = document.querySelector('#call-button');
@@ -140,7 +138,10 @@
     callButton.addEventListener('click', () => {
       lib.open({
         path: 'https://m.1688.com/offer/603376384277.html',
-      });
+        callback: function() {
+          alert('打不开')
+        }
+      })
     });
 
     // 因为业务需要，我们需要添加 outChain 属性

@@ -37,7 +37,9 @@
 
   <div class="button" id='call-button1'>点击唤起客户端 - 不带对方信息</div>
 
-  <div class="button" id='call-button2'>点击唤起客户端 - 存唤起对方信息</div>
+  <div class="button" id='call-button2'>点击唤起客户端 - 纯唤起千牛/旺旺</div>
+
+  <div class="button" id='call-button3'>点击唤起客户端 - 不带信息</div>
   <script>
     document.getElementById('call-button0').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=cnalichnth6669&siteid=cnalichn&status=1'
@@ -47,6 +49,9 @@
     })
     document.getElementById('call-button2').addEventListener("click",function() {
       window.top.location.href = 'aliim:'
+    })
+    document.getElementById('call-button3').addEventListener("click",function() {
+      window.top.location.href = 'aliim:sendmsg?siteid=cnalichn&status=1'
     })
   </script>
 </body>

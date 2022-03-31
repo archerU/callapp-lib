@@ -51,6 +51,8 @@
 
   <div class="button" id='call-button8'>8、点击唤起客户端 - 唤起自己</div>
 
+  <div class="button" id='call-button9'>9、点击唤起客户端 - 唤起系统消息</div>
+
   <script>
     document.getElementById('call-button0').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=cnalichnth6669&siteid=cnalichn&status=1'
@@ -79,6 +81,9 @@
     })
     document.getElementById('call-button8').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=b测试账号002&siteid=cnalichn&status=1'
+    })
+    document.getElementById('call-button9').addEventListener("click",function() {
+      window.top.location.href = 'aliim:sendmsg?touid=系统消息&siteid=cnalichn&status=1'
     })
   </script>
 </body>

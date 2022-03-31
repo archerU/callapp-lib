@@ -55,6 +55,8 @@
 
   <div class="button" id='call-button10'>10、点击唤起客户端 - 唤起b测试账号003</div>
 
+  <div class="button" id='call-button11'>11、点击唤起客户端 - 编码后 唤起b测试账号003</div>
+
   <script>
     document.getElementById('call-button0').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=cnalichnth6669&siteid=cnalichn&status=1'
@@ -89,6 +91,9 @@
     })
     document.getElementById('call-button10').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=b测试账号003&siteid=cnalichn&status=1'
+    })
+    document.getElementById('call-button11').addEventListener("click",function() {
+      window.top.location.href = 'aliim:sendmsg?touid='+ encodeURIComponent('b测试账号003') + '&siteid=cnalichn&status=1'
     })
   </script>
 </body>

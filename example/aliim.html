@@ -49,6 +49,8 @@
   
   <div class="button" id='call-button7'>7、点击唤起客户端 - 假的账号</div>
 
+  <div class="button" id='call-button8'>8、点击唤起客户端 - 唤起自己</div>
+
   <script>
     document.getElementById('call-button0').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=cnalichnth6669&siteid=cnalichn&status=1'
@@ -74,6 +76,9 @@
     })
     document.getElementById('call-button7').addEventListener("click",function() {
       window.top.location.href = 'aliim:sendmsg?touid=假的账号&siteid=cnalichn&status=1'
+    })
+    document.getElementById('call-button8').addEventListener("click",function() {
+      window.top.location.href = 'aliim:sendmsg?touid=b测试账号002&siteid=cnalichn&status=1'
     })
   </script>
 </body>
